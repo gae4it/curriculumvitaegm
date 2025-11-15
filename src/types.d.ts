@@ -279,3 +279,51 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+// CV Custom Types
+export type Language = {
+  name: string;
+  level: string;
+};
+
+export type WorkExperience = {
+  period: string;
+  title: string;
+  company: string;
+  location: string;
+  description: string[];
+};
+
+export type Education = {
+  year: string;
+  title: string;
+  institution: string;
+  details: string[];
+};
+
+export type ProfessionalRole = {
+  title: string;
+  level: string;
+  description: string[];
+  skills: string[];
+};
+
+export type PortfolioItem = {
+  image: string;
+  url: string;
+  type: string;
+  stack: string;
+  ambito: string;
+};
+
+export type ProjectItem = {
+  image: string;
+  url: string;
+  hosting: string;
+  stack: string;
+};
+
+export type SoftSkill = {
+  icon: string;
+  text: string;
+};

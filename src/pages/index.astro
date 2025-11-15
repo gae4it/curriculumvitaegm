@@ -1,399 +1,557 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
+  title: 'John Doe – CV',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  description: 'Curriculum Vitae of John Doe. Digital Retail, E-Commerce, Front-End Web Development.',
 };
 ---
 
-<Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+<PageLayout metadata={metadata}>
+  <head slot="head">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache, notranslate" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache, notranslate" />
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache, notranslate" />
+    <meta name="yandex" content="none" />
+    <meta name="duckduckbot" content="noindex, nofollow" />
+    <meta name="baiduspider" content="noindex, nofollow" />
+    <meta name="OpenAI" content="noindex, nofollow" />
+    <meta name="Anthropic" content="noindex, nofollow" />
+  </head>
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
-    </Fragment>
+  <main class="min-h-screen text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
+    <!-- Header / Hero Section -->
+    <section
+      class="w-full bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-16 px-4 flex flex-col items-center"
+    >
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 text-center">John Doe</h1>
+      <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
+        Digital Retail Store Operations<br />Front-End Web Development<br /> E-Commerce Specialist
+      </h2>
+      <div class="text-lg md:text-xl font-medium mb-6 text-center">
+        Web Design & UX/UI & Content Management<br />Analytics & SEO & Website Performance
+      </div>
+    </section>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
-    </Fragment>
-  </Hero>
+    <!-- Languages Section -->
+    <section class="max-w-3xl mx-auto py-8 px-4">
+      <h3 class="text-2xl font-bold mb-4">Languages</h3>
+      <ul class="flex flex-wrap gap-4">
+        <li class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full font-semibold flex items-center">
+          <img
+            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/gb.svg"
+            alt="UK flag"
+            class="w-6 h-6 mr-2"
+            loading="lazy"
+          />
+          English <span class="ml-2 text-xs mr-1">(C1 Business)</span>
+        </li>
+        <li class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full font-semibold flex items-center">
+          <img
+            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/de.svg"
+            alt="German flag"
+            class="w-6 h-6 mr-2"
+            loading="lazy"
+          />
+          German <span class="ml-2 text-xs mr-1">(C1 Business)</span>
+        </li>
+        <li class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full font-semibold flex items-center">
+          <img
+            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/it.svg"
+            alt="Italian flag"
+            class="w-6 h-6 mr-2"
+            loading="lazy"
+          />
+          Italian <span class="ml-2 text-xs mr-1">(C2 Native)</span>
+        </li>
+      </ul>
+    </section>
 
-  <!-- Note Widget ******************* -->
+    <!-- Work Experience Section -->
+    <section class="max-w-5xl mx-auto py-8 px-4">
+      <h3 class="text-2xl font-bold mb-8">Work Experience</h3>
+      <!-- 2024 - Present -->
+      <section class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Work Experience Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-blue-700 font-bold text-lg mb-2">2024 - Present</div>
+          <div class="font-semibold text-xl mb-1">E-Commerce Specialist / Front-End Web Developer</div>
+          <div class="text-gray-500 mb-2">Haufe-Lexware GmbH & Co. KG - Freiburg im Breisgau, Germany</div>
+          <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
+            <li class="flex items-start gap-2">
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Creation and
+              maintenance of informational web pages, product pages, marketing landing pages, categories and products
+              for the websites: shop.haufe.de, shop.lexware.de, haufegroup.com, haufe.de
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 2020 - 2023 -->
+      <section class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Work Experience Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-blue-700 font-bold text-lg mb-2">2020 - 2023</div>
+          <div class="font-semibold text-xl mb-1">Kaufmann im Einzelhandel / E-Commerce Specialist</div>
+          <div class="text-gray-500 mb-2">Hild Radwelt GmbH - Freiburg im Breisgau, Germany</div>
+          <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
+            <li class="flex items-start gap-2">
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Creation from scratch
+              of the Website on Shopify, creation and maintenance of informational content pages, services pages,
+              product pages, categories and products for the website hild-radwelt.de with a 4.7 Trusted Shop score (June
+              2023).
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Technical Sales
+              Assistant Bikes & E-Bikes (City, Road, Trekking, Mountainbike, Cargobike) Leasing / Financial / Insurance
+              services.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Secondary tasks:
+              Social Media Marketing instagram.com/hild.radwelt, facebook.com/hild.radwelt. IT-Technician,
+              Photoshooting, Graphic Design & Print Design for marketing in-store and online (banner, graphics, flyers,
+              brochure, social media).
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 2016 - 2020 -->
+      <section class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Work Experience Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-blue-700 font-bold text-lg mb-2">2016 - 2020</div>
+          <div class="font-semibold text-xl mb-1">Kaufmann im Einzelhandel</div>
+          <div class="text-gray-500 mb-2">Family company - Milan, Italy</div>
+          <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
+            <li class="flex items-start gap-2">
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Management of the
+              shop, Contact with the suppliers, product orders and arrivals, warehouse and shelves organization,
+              furnishing and window dressing, customer support, product shipping, pricing with markups, invoice
+              management, ERP Software product database management, electronic scales and digital cash register with
+              electronic invoicing, business administration and accountant liaison, HACCP and workplace safety training,
+              regulatory monitoring.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 2013-2015 -->
+      <section class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Work Experience Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-blue-700 font-bold text-lg mb-2">2013-2015</div>
+          <div class="font-semibold text-xl mb-1">Web Design / Content Management</div>
+        </div>
+      </section>
+      <!-- 2009-2012 -->
+      <section class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Work Experience Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-blue-700 font-bold text-lg mb-2">2009-2012</div>
+          <div class="font-semibold text-xl mb-1">Retail Store Operations / E-Commerce Management</div>
+        </div>
+      </section>
+    </section>
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+    <!-- Education Section -->
+    <section class="max-w-5xl mx-auto py-8 px-4">
+      <h3 class="text-2xl font-bold mb-8">Education</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100">
+          <div class="text-blue-700 font-bold text-lg mb-2">2025</div>
+          <img
+            src="/assets/images/logo-placeholder.svg"
+            alt="Logo placeholder"
+            class="w-16 h-16 mx-auto mb-2 opacity-60"
+          />
+          <div class="font-semibold text-xl mb-1">Front-End Web Developer - Fortbildung</div>
+          <div class="text-gray-500 mb-2">Mozilla Developer Network - Learning Partner Scrimba</div>
+          <div>
+            <button
+              type="button"
+              class="text-xs text-blue-600 underline mb-2 mx-auto"
+              aria-expanded="false"
+              aria-controls="skills-2025"
+              onclick="const e2025=document.getElementById('skills-2025'); const btn2025=this; if(e2025.classList.toggle('hidden')){btn2025.setAttribute('aria-expanded','false');btn2025.textContent='More info';}else{btn2025.setAttribute('aria-expanded','true');btn2025.textContent='Less info';}"
+              >More info</button
+            >
+            <div id="skills-2025" class="hidden text-xs text-gray-400 mt-2">
+              HTML5, CSS3, JavaScript (ES6+), DOM Manipulation, Responsive Design, Web Accessibility (a11y), Semantic
+              HTML, CSS Flexbox and Grid, Web Forms, Web Standards, Web Performance Optimization, Git, GitHub, Command
+              Line (CLI), NPM, Node.js, Module Bundlers (Vite, Webpack), Browser DevTools, Debugging, React.js, Next.js,
+              TypeScript, Tailwind CSS, Bootstrap, Styled Components, CSS-in-JS, Web Design Principles, Color Theory,
+              Typography, Layout and Composition, UI/UX Fundamentals, Design Systems, Web APIs, Fetch, REST, JSON,
+              Third-Party APIs (OpenAI, Unsplash, Firebase), Async JavaScript (Promises, async/await), Error Handling,
+              Client-Side Routing, State Management (Context API, useReducer), Component Architecture, Testing (unit
+              testing, Jest), Accessibility Testing, Web Security (XSS, CORS, HTTPS), Progressive Web Apps (PWAs), SEO,
+              Deploying Apps (Vercel, Netlify, GitHub Pages), Project Planning, Agile Workflow, Code Readability and
+              Maintainability, Collaboration with GitHub, Portfolio Building, Interview Preparation, and Building
+              Single-Page and Multi-Page Applications.
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100">
+          <div class="text-blue-700 font-bold text-lg mb-2">2023</div>
+          <img
+            src="/assets/images/logo-placeholder.svg"
+            alt="Logo placeholder"
+            class="w-16 h-16 mx-auto mb-2 opacity-60"
+          />
+          <div class="font-semibold text-xl mb-1">E-Commerce Manager & Marketing - Weiterbildung</div>
+          <div class="text-gray-500 mb-2">WBS Training - Freiburg im Breisgau, Germany</div>
+          <div>
+            <button
+              type="button"
+              class="text-xs text-blue-600 underline mb-2 mx-auto"
+              aria-expanded="false"
+              aria-controls="skills-2023"
+              onclick="const e2023=document.getElementById('skills-2023'); const btn2023=this; if(e2023.classList.toggle('hidden')){btn2023.setAttribute('aria-expanded','false');btn2023.textContent='More info';}else{btn2023.setAttribute('aria-expanded','true');btn2023.textContent='Less info';}"
+              >More info</button
+            >
+            <div id="skills-2023" class="hidden text-xs text-gray-400 mt-2">
+              E-Commerce Management, Social Media Management, Content Creation, Web Design, HTML, CSS, Graphic Design,
+              Desktop Publishing, In/Out-Bound & Performance Marketing, CMS, CRM, Online Law, Project Management, UX/UI,
+              SEM (SEO, SEA), Social Media Marketing, Google Marketing, Web Analytics.
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100">
+          <div class="text-blue-700 font-bold text-lg mb-2">2021</div>
+          <img
+            src="/assets/images/logo-placeholder.svg"
+            alt="Logo placeholder"
+            class="w-16 h-16 mx-auto mb-2 opacity-60"
+          />
+          <div class="font-semibold text-xl mb-1">Kaufmann im Einzelhandel - Ausbildung Anerkennung</div>
+          <div class="text-gray-500 mb-2">
+            IHK Industrie- und Handelskammer Südlicher Oberrhein - Freiburg im Breisgau, Germany
+          </div>
+          <div>
+            <button
+              type="button"
+              class="text-xs text-blue-600 underline mb-2 mx-auto"
+              aria-expanded="false"
+              aria-controls="skills-2021"
+              onclick="const e2021=document.getElementById('skills-2021'); const btn2021=this; if(e2021.classList.toggle('hidden')){btn2021.setAttribute('aria-expanded','false');btn2021.textContent='More info';}else{btn2021.setAttribute('aria-expanded','true');btn2021.textContent='Less info';}"
+              >More info</button
+            >
+            <div id="skills-2021" class="hidden text-xs text-gray-400 mt-2">
+              Beraten und Verkaufen (erfolgsorientiert, anspruchsvollen Situationen), arbeiten in E-Commerce
+              Onlinehandel, Offline und Online Marketing, Warenpräsentation, Mitwirken bei Werbung und
+              Verkaufsförderung, Kassieren und Kassenabrechnen, Warenannahme, Lagerung, Warenbeständen, Warensortiment,
+              Arbeitsprozessen Planung / Organisation, Personaleinsatz, Preiskalkulation, Erfolgskontrolle.
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100">
+          <div class="text-blue-700 font-bold text-lg mb-2">2000 - 2005</div>
+          <div class="font-semibold text-xl mb-1">Abitur</div>
+          <div class="text-gray-500 mb-2">Michelangelo High School Gymnasium - Milan, Italy</div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col mt-6">
+        <div class="font-semibold text-xl mb-1">Other Certifications</div>
+        <div class="text-xs text-gray-400 mb-2">
+          Microsoft Office 365, Google Digital Training (Google Analytics, Google Ads, Google Marketing, Google Suite),
+          Windows IT Support, Adobe Photoshop, Adobe Indesign, Adobe Premiere, Figma, Shopify, Webflow, Wordpress,
+          Agile, Scrum, Effective Communication & NLP, HACCP, DSGVO, SEO, E-Commerce SEO, Social Media E-Commerce,
+          Visual Studio Code, Git, GitHub, HTML, CSS, Javascript, React, NextJS, Vue, Astro.
+        </div>
+      </div>
+    </section>
 
-  <!-- Features Widget *************** -->
+    <!-- Professional Roles Section -->
+    <section class="max-w-5xl mx-auto py-8 px-4">
+      <h3 class="text-2xl font-bold mb-8">Professional Roles</h3>
+      <!-- Retail Store Operations -->
+      <section class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Professional Role Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-sm text-white mb-1">Management of a physical shop and Back Office</div>
+          <div class="text-blue-700 font-bold text-2xl mb-2">Retail Store Operations (Kaufmann Im Einzelhandel)</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 mb-2">Level: Senior · 10+ Years experience</div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Back Office Skills
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            Data management on ERP, CRM, PIM Software, with Digital Invoices support.<br />Passive cycle: Contact with
+            the product distributors, purchasing, Inventory and Warehouse Management, orders, goods receipts, delivery
+            bills, package control, warehouse organization.<br />Active cycle: price calculation & monitoring, invoices,
+            packaging, deliveries, tracking codes, complaints, returns, credit notes, daily cashier credits, promotions
+            and Customer Cards.
+          </div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Front Office Skills
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            Presentation of goods, Merchandise Display, Radio / TV in Store.<br />Technical consulting, effective
+            communication, multilingual support (English, German, Italian)
+          </div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Software
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            ERP / CRM / PIM, Point of Sale: Haufe Office Products, Danea Easyfatt, Microsoft Dynamics, Salesforce, SAP,
+            Infor, vTiger, Oracle, Fidelio, Opera, ZEG<br />Microsoft Office 365: Word, Excel, PowerPoint, Teams,
+            SharePoint, Power Apps.<br />Other Tools: Miro, Google Workspace, Google Maps (MyBusiness)
+          </div>
+        </div>
+      </section>
+      <!-- E-Commerce Specialist -->
+      <section class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Professional Role Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-sm text-white mb-1">
+            Setting up of E-Commerce Websites from scratch on different E-CMS platforms.
+          </div>
+          <div class="text-blue-700 font-bold text-2xl mb-2">E-Commerce Specialist</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 mb-2">Level: Intermediate · 8+ Years experience</div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Skills
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            Online store creation, UX-UI design, domain / hosting setup, Content Management, Website Structure, Menu
+            Structure, Blog SEO friendly Marketing Contents, Product Descriptions, Product Photos, payment integration,
+            multi-language, Configuration and integration (Trusted Shops TrustBadge, Trusted Shops Legal Protection,
+            PayPal, Amazon Payments, GDPR Compliance, Data Protection, Privacy Management, Cookie Bar, Chat, Trained AI
+            Bot Chat, Search Bar Marketing, A/B Testing. Interface connection with Management Software
+            (WaWi/ERP-Schnittstelle) to update Products, Descriptions, Quantity, Prices, Images, Invoices.
+          </div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Software
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            <b>E-CMS Platforms:</b> Webflow, Shopify, PrestaShop, Shopware, WordPress WooCommerce (Elementor, Divi) Joomla
+            Virtuemart, Adobe Commerce (Magento), Jimdo, Squarespace, Big Commerce, Storeden, Dukaan, Sellfy, Ecwid, Weebly.<br
+            /><bdi>Marketplace:</bdi> Amazon, eBay, Google Shopping, Idealo, Trovaprezzi, Instagram / Facebook Shop<br
+            /><b>Smart Catalogs:</b> Flipsnack, Publitas
+          </div>
+        </div>
+      </section>
+      <!-- Front-End Web Developer -->
+      <section class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Professional Role Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-sm text-white mb-1">
+            Web app development on React / Next.js / Vue / Astro JS libraries or CMS
+          </div>
+          <div class="text-blue-700 font-bold text-2xl mb-2">Front-End Web Developer</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 mb-2">Level: Junior · 2+ Years experience</div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Technologies
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            <b>Languages:</b> HTML5, CSS3, JavaScript, Typescript<br /><b>JS / CSS Libraries:</b> React.js, NextJS, Vue,
+            Nuxt, Astro, Tailwind, Bootstrap<br /><b>Hosting:</b> Vercel, Netlify, Hostinger, PhpMyAdmin, Plesk, cPanel,
+            MySQL, SSH, Softaculous<br /><b>Database:</b> SQL, PostgreSQL, Firebase<br /><b>Headless CMS:</b> Strapi
+          </div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Software
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            <b>Dev:</b> Visual Studio Code, JetBrains, GitHub, GitLab<br />
+            <b>Project Management:</b> Jira, Confluence, Trello, Notion, ClickUp, Agile & Scrum, Kanban, Budgeting e Forecasting,
+            Business Process Optimization, KPI Monitoring, Team Coordination / Cross-functional Collaboration<br />
+            <b>CMS:</b> Webflow, Framer, Webflow, WordPress (Elementor, Divi), Joomla, Typo3, Squarespace, Drupal.<br />
+            <b>Design:</b> Figma, Miro, Canva, Adobe Photoshop, Adobe Indesign, Adobe Premiere, Affinity.<br />
+            <b>AI:</b> Github Copilot, Claude, ChatGPT, Cursor, Windurf, Lovable, Replit
+          </div>
+        </div>
+      </section>
+      <!-- Analytics & SEO & Website Performance -->
+      <section class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden">
+        <div
+          class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            alt="Professional Role Visual"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <div class="text-sm text-white mb-1">
+            Content analysis, optimization and promotion on the preferred target groups channels
+          </div>
+          <div class="text-blue-700 font-bold text-2xl mb-2">Analytics & SEO & Website Performance</div>
+          <div class="text-xs text-gray-600 dark:text-gray-400 mb-2">Level: Intermediate · 5+ Years experience</div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Skills
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            SEO Keyword Research, Competitor Analysis, Online Reputation, Backlink Strategy, Company Directories, Web
+            Catalogs, Website Search Bar Marketing, Customer Journey, Meta Title, Meta Content, Meta Description, Meta
+            Keywords, Meta Robots, Google Bot, Canonical Link, Rich Snippet Schema.org, DCMI Schema Dublin Core
+            Metadata, Local Geo Tag, Open Graph Social Media, Twitter Card, Sitemap.xml, Robots.txt.<br />Search Engine
+            Marketing (SEM): SEO-Optimization, SEO-Content Management, SEO-Keyword Research)<br />Social Media Marketing
+            (SMM): SMA + SMO on Instagram, Facebook, LinkedIn, X, Tiktok, Pinterest, Telegram, Whatsapp, Twitch, Discord<br
+            /><b>Social Media Commerce:</b> Meta Commerce with Instagram & Facebook Shop<br /><b>E-Mail Marketing:</b> MailChimp,
+            Mailup, Rapidmail, Eloqua
+          </div>
+          <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
+            <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Google Tools
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-400 mb-2">
+            Google Tag Manager, Google Analytics, Google Business, Google Keyword Planner, Google Lighthouse, Google
+            Maps, Google Merchant, Google Search Console, Google Trends.<br />SEO & Analysis Tools: Ahrefs, Econda,
+            AIOSEO, AnswerThePublic, ContentBird, GTmetrix, PageSpeed Insights / Lighthouse, Seobility, SEMrush,
+            Sistrix, Ubersuggest, Yoast SEO.<br />Marketing & Automation Tools: FactFinder, HubSpot, Hootsuite.
+          </div>
+        </div>
+      </section>
+    </section>
 
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
-</Layout>
+    <!-- Soft Skills Section -->
+    <section class="max-w-5xl mx-auto py-8 px-4 relative">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent pointer-events-none -z-10"></div>
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-2">Soft Skills</h3>
+        <!-- <div class="text-gray-500 dark:text-gray-300 text-base">Personal and professional strengths</div> -->
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 flex items-start gap-4"
+        >
+          <span class="w-12 h-12 flex items-center justify-center text-3xl mb-0 text-primary">🧠</span>
+          <div>
+            <div class="font-semibold text-lg mb-1">Analytical thinking and problem-solving</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              Ability to analyze complex situations and find effective solutions.
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 flex items-start gap-4"
+        >
+          <span class="w-12 h-12 flex items-center justify-center text-3xl mb-0 text-primary">⚡</span>
+          <div>
+            <div class="font-semibold text-lg mb-1">Quick adaptation to new technologies</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              Fast learner, able to master new tools and frameworks efficiently.
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 flex items-start gap-4"
+        >
+          <span class="w-12 h-12 flex items-center justify-center text-3xl mb-0 text-primary">🤝</span>
+          <div>
+            <div class="font-semibold text-lg mb-1">Empathetic and customer-oriented approach</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              Strong empathy and focus on customer needs and satisfaction.
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 flex items-start gap-4"
+        >
+          <span class="w-12 h-12 flex items-center justify-center text-3xl mb-0 text-primary">💬</span>
+          <div>
+            <div class="font-semibold text-lg mb-1">Effective communication and teamwork</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              Clear communicator and collaborative team player.
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 flex items-start gap-4"
+        >
+          <span class="w-12 h-12 flex items-center justify-center text-3xl mb-0 text-primary">🔧</span>
+          <div>
+            <div class="font-semibold text-lg mb-1">Digitalization of the processes and efficiency improvement</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              Constantly seeking ways to improve processes through digital tools.
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 flex items-start gap-4"
+        >
+          <span class="w-12 h-12 flex items-center justify-center text-3xl mb-0 text-primary">📚</span>
+          <div>
+            <div class="font-semibold text-lg mb-1">Continuous learning mindset</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+              Driven by curiosity and a constant desire to acquire new knowledge and skills.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</PageLayout>

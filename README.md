@@ -300,3 +300,31 @@ Initially created by **Arthelokyo** and maintained by a community of [contributo
 ## License
 
 **AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
+
+# README
+
+## Astro CV Project Structure
+
+- **Single Home Page**: All CV content is inserted directly in `src/pages/index.astro`.
+- **Demo Components**: All components and widgets used in demo pages are collected in `src/pages/components.astro` for reference and reuse.
+- **Demo Page Removal**: All other demo pages have been removed to keep the project clean and focused.
+- **Styling**: All sections are built and styled with Tailwind CSS directly in the home page.
+- **TypeScript Declarations**: All type declarations are in a separate file (`src/types.d.ts`).
+- **SEO & Privacy**: The site is fully blocked from search engine and AI bot indexing (robots.txt, meta tag, header).
+- **Design**:
+  - Timeline for Work Experience
+  - Cards for Education
+  - Large slider cards for Professional Roles and Portfolio
+  - Soft Skills with emoji
+
+## How to Work
+
+- Edit `src/pages/index.astro` directly to update content, style, and functions.
+- Use `src/pages/components.astro` as a reference for available components.
+- Update types in `src/types.d.ts` if needed.
+
+## Notes
+
+- No personal data is present outside of `index.astro`.
+- No SEO or tracking functions are present.
+- Everything needed for the CV presentation is contained in a single page.
