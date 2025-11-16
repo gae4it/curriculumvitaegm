@@ -12,7 +12,6 @@ const metadata = {
 };
 ---
 
-
 <PageLayout metadata={metadata}>
   <head slot="head">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache, notranslate" />
@@ -43,28 +42,135 @@ const metadata = {
 
     <!-- Trust Section -->
     <section class="w-full py-8 px-2 md:px-8 bg-white dark:bg-gray-800">
-      <div class="max-w-7xl mx-auto">
+      <div class="max-w-5xl mx-auto">
         <div class="flex flex-wrap gap-3 justify-center items-center text-xs font-semibold">
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Figma">🎨 Figma</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Shopify">🛍️ Shopify</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Webflow">🌊 Webflow</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="WordPress">📝 WordPress</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="SEO">🔍 SEO</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="E-Commerce">🛒 E-Commerce</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Social Media">📱 Social Media</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="UI Design">🎭 UI Design</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Command Line">⌨️ CLI</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Netlify">🚀 Netlify</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="VS Code">💻 VS Code</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Git">📦 Git</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="GitHub">🐙 GitHub</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="HTML">🌐 HTML</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="CSS">🎨 CSS</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="JavaScript">⚡ JavaScript</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="React">⚛️ React</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Next.js">▲ Next.js</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Vue">💚 Vue</span>
-          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Astro">🚀 Astro</span>
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Figma">🎨 Figma</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Shopify">🛍️ Shopify</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Webflow">🌊 Webflow</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="WordPress">📝 WordPress</span
+          >
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="SEO"
+            >🔍 SEO</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="E-Commerce">🛒 E-Commerce</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Social Media">📱 Social Media</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="UI Design">🎭 UI Design</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Command Line">⌨️ CLI</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Netlify">🚀 Netlify</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Vercel">▲ Vercel</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="VS Code">💻 VS Code</span
+          >
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Git"
+            >📦 Git</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="GitHub">🐙 GitHub</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="HTML">🌐 HTML</span
+          >
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="CSS"
+            >🎨 CSS</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="JavaScript">⚡ JavaScript</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="TypeScript">💙 TypeScript</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="React">⚛️ React</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Next.js">▲ Next.js</span
+          >
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Vue"
+            >💚 Vue</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Astro">🚀 Astro</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Tailwind CSS">🌊 Tailwind</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Firebase">🔥 Firebase</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Microsoft Office">📊 Office 365</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Google">🔍 Google</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Adobe">🎨 Adobe</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Power Apps">⚡ Power Apps</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="PostgreSQL">🐘 PostgreSQL</span
+          >
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="CMS"
+            >🗂️ CMS</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Headless CMS">🔗 Headless CMS</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="ERP/CRM">🗃️ ERP/CRM</span
+          >
+          <span
+            class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full"
+            title="Project Management">🔋 Jira/Agile/Scrum</span
+          >
         </div>
       </div>
     </section>
@@ -152,8 +258,10 @@ const metadata = {
           <div class="text-gray-500 mb-2">Hild Radwelt GmbH - Freiburg im Breisgau, Germany</div>
           <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
             <li class="flex items-start gap-2">
-              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Shopify CMS: Creation from scratch of the Website hild-radwelt.de, creation and maintenance of informational contents, services pages, product pages, ERP Integration for categories, products and prices for the website with a 4.7 ⭐ Trusted Shop score (June
-              2023).
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Shopify CMS: Creation
+              from scratch of the Website hild-radwelt.de, creation and maintenance of informational contents, services
+              pages, product pages, ERP Integration for categories, products and prices for the website with a 4.7 ⭐
+              Trusted Shop score (June 2023).
             </li>
             <li class="flex items-start gap-2">
               <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Technical Sales
@@ -190,13 +298,14 @@ const metadata = {
           <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
             <li class="flex items-start gap-2">
               <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>
-              Management of the shop: Contact with the suppliers, product orders and arrivals, warehouse and shelves organization, furnishing and window dressing, customer support, product shipping.
+              Management of the shop: Contact with the suppliers, product orders and arrivals, warehouse and shelves organization,
+              furnishing and window dressing, customer support, product shipping.
             </li>
             <li class="flex items-start gap-2">
               <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>
-              Back Office: Pricing with markups, invoice management, ERP Software product database management, electronic scales and digital cash register with
-              electronic invoicing, business administration and accountant liaison, HACCP and workplace safety training,
-              regulatory monitoring.
+              Back Office: Pricing with markups, invoice management, ERP Software product database management, electronic
+              scales and digital cash register with electronic invoicing, business administration and accountant liaison,
+              HACCP and workplace safety training, regulatory monitoring.
             </li>
           </ul>
         </div>
@@ -250,7 +359,6 @@ const metadata = {
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
-          
           <img
             src="/images/mozilla-developer-network.png"
             alt="Mozilla Developer Network logo"
@@ -287,7 +395,6 @@ const metadata = {
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
-          
           <img
             src="/images/wbs.png"
             alt="WBS Training logo"
@@ -316,7 +423,6 @@ const metadata = {
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
-          
           <img
             src="/images/ihkso.png"
             alt="IHK Industrie- und Handelskammer Südlicher Oberrhein logo"
@@ -357,17 +463,23 @@ const metadata = {
         >
           <div class="text-blue-700 font-bold text-lg mb-2">2023 - 2025</div>
           <div class="font-semibold text-xl mb-1">Dev Certifications</div>
-          <div class="text-gray-500 mb-2">Figma, Shopify, Webflow, Wordpress, SEO, E-Commerce SEO, Social Media E-Commerce, UI Design, Command Line, Netlify, Visual Studio Code, Git, GitHub, HTML, CSS, Javascript, React, NextJS, Vue, Astro</div>
+          <div class="text-gray-500 mb-2">
+            Figma, Shopify, Webflow, Wordpress, SEO, E-Commerce SEO, Social Media E-Commerce, UI Design, Command Line,
+            Netlify, Visual Studio Code, Git, GitHub, HTML, CSS, Javascript, React, NextJS, Vue, Astro
+          </div>
         </div>
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
           <div class="text-blue-700 font-bold text-lg mb-2">2015 - 2023</div>
           <div class="font-semibold text-xl mb-1">Other Certifications</div>
-          <div class="text-gray-500 mb-2">Microsoft Office 365, Google Digital Training (Google Analytics, Google Ads, Google Marketing, Google Suite), Windows IT Support, Adobe Photoshop, Adobe Indesign, Adobe Premiere, Agile, Scrum, Effective Communication & NLP, HACCP, DSGVO, Information Security.</div>
+          <div class="text-gray-500 mb-2">
+            Microsoft Office 365, Google Digital Training (Google Analytics, Google Ads, Google Marketing, Google
+            Suite), Windows IT Support, Adobe Photoshop, Adobe Indesign, Adobe Premiere, Agile, Scrum, Effective
+            Communication & NLP, HACCP, DSGVO, Information Security.
+          </div>
         </div>
       </div>
-
     </section>
 
     <!-- Professional Roles Section -->
