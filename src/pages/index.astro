@@ -3,14 +3,15 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
 
 const metadata = {
-  title: 'John Doe – CV',
+  title: 'Curriculum Vitae - Portfolio',
   robots: {
     index: false,
     follow: false,
   },
-  description: 'Curriculum Vitae of John Doe. Digital Retail, E-Commerce, Front-End Web Development.',
+  description: 'Curriculum Vitae and Portfolio. Digital Retail, E-Commerce, Front-End Web Development.',
 };
 ---
+
 
 <PageLayout metadata={metadata}>
   <head slot="head">
@@ -31,7 +32,7 @@ const metadata = {
     <section
       class="w-full bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-16 px-4 flex flex-col items-center"
     >
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 text-center">Gaetano Mazza</h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 text-center">Gaetano Mazzarella</h1>
       <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
         E-Commerce Specialist<br />Front-End Web Development
       </h2>
@@ -40,6 +41,33 @@ const metadata = {
       </div>
     </section>
 
+    <!-- Trust Section -->
+    <section class="w-full py-8 px-2 md:px-8 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap gap-3 justify-center items-center text-xs font-semibold">
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Figma">🎨 Figma</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Shopify">🛍️ Shopify</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Webflow">🌊 Webflow</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="WordPress">📝 WordPress</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="SEO">🔍 SEO</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="E-Commerce">🛒 E-Commerce</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Social Media">📱 Social Media</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="UI Design">🎭 UI Design</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Command Line">⌨️ CLI</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Netlify">🚀 Netlify</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="VS Code">💻 VS Code</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Git">📦 Git</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="GitHub">🐙 GitHub</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="HTML">🌐 HTML</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="CSS">🎨 CSS</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="JavaScript">⚡ JavaScript</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="React">⚛️ React</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Next.js">▲ Next.js</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Vue">💚 Vue</span>
+          <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 rounded-full" title="Astro">🚀 Astro</span>
+        </div>
+      </div>
+    </section>
     <!-- Languages Section -->
     <section class="max-w-3xl mx-auto py-8 px-4">
       <h3 class="text-2xl font-bold mb-4">Languages</h3>
@@ -74,9 +102,9 @@ const metadata = {
       </ul>
     </section>
 
-    <!-- Work Experience Section -->
     <section class="max-w-5xl mx-auto py-8 px-4">
       <h3 class="text-2xl font-bold mb-8">Work Experience</h3>
+
       <!-- 2024 - Present -->
       <section
         class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-800 rounded-xl shadow mb-8 overflow-hidden border-2 border-black dark:border-none"
@@ -85,9 +113,9 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Work Experience Visual"
-            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            src="/images/haufe-group.png"
+            alt="Haufe Group logo"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-90"
             loading="lazy"
           />
         </div>
@@ -99,7 +127,7 @@ const metadata = {
             <li class="flex items-start gap-2">
               <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Creation and
               maintenance of informational web pages, product pages, marketing landing pages, categories and products
-              for the websites: shop.haufe.de, shop.lexware.de, haufegroup.com, haufe.de
+              for the websites: shop.haufe.de, shop.lexware.de, haufegroup.com, haufe.de on custom CMS and Webflow.
             </li>
           </ul>
         </div>
@@ -112,9 +140,9 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Work Experience Visual"
-            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            src="/images/hild-radwelt-shop.webp"
+            alt="Hild Radwelt Shop"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-90"
             loading="lazy"
           />
         </div>
@@ -124,19 +152,17 @@ const metadata = {
           <div class="text-gray-500 mb-2">Hild Radwelt GmbH - Freiburg im Breisgau, Germany</div>
           <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
             <li class="flex items-start gap-2">
-              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Creation from scratch
-              of the Website on Shopify, creation and maintenance of informational content pages, services pages,
-              product pages, categories and products for the website hild-radwelt.de with a 4.7 Trusted Shop score (June
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Shopify CMS: Creation from scratch of the Website hild-radwelt.de, creation and maintenance of informational contents, services pages, product pages, ERP Integration for categories, products and prices for the website with a 4.7 ⭐ Trusted Shop score (June
               2023).
             </li>
             <li class="flex items-start gap-2">
               <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Technical Sales
-              Assistant Bikes & E-Bikes (City, Road, Trekking, Mountainbike, Cargobike) Leasing / Financial / Insurance
+              Assistant: Bikes & E-Bikes (City, Road, Trekking, Mountainbike, Cargobike) Leasing / Financial / Insurance
               services.
             </li>
             <li class="flex items-start gap-2">
               <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Secondary tasks:
-              Social Media Marketing instagram.com/hild.radwelt, facebook.com/hild.radwelt. IT-Technician,
+              Social Media Marketing instagram.com/hild.radwelt, facebook.com/hild.radwelt, IT-Technician,
               Photoshooting, Graphic Design & Print Design for marketing in-store and online (banner, graphics, flyers,
               brochure, social media).
             </li>
@@ -151,9 +177,9 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Work Experience Visual"
-            class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+            src="/images/frutteto.jpg"
+            alt="Family company - Frutteto"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-90"
             loading="lazy"
           />
         </div>
@@ -163,10 +189,12 @@ const metadata = {
           <div class="text-gray-500 mb-2">Family company - Milan, Italy</div>
           <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2 mt-2">
             <li class="flex items-start gap-2">
-              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>Management of the
-              shop, Contact with the suppliers, product orders and arrivals, warehouse and shelves organization,
-              furnishing and window dressing, customer support, product shipping, pricing with markups, invoice
-              management, ERP Software product database management, electronic scales and digital cash register with
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>
+              Management of the shop: Contact with the suppliers, product orders and arrivals, warehouse and shelves organization, furnishing and window dressing, customer support, product shipping.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1"><Icon name="tabler:check" class="text-green-500 w-5 h-5" /></span>
+              Back Office: Pricing with markups, invoice management, ERP Software product database management, electronic scales and digital cash register with
               electronic invoicing, business administration and accountant liaison, HACCP and workplace safety training,
               regulatory monitoring.
             </li>
@@ -181,7 +209,7 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            src="/images/milan-city.jpg"
             alt="Work Experience Visual"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
             loading="lazy"
@@ -190,6 +218,7 @@ const metadata = {
         <div class="md:w-2/3 p-6 flex flex-col justify-center">
           <div class="text-blue-700 font-bold text-lg mb-2">2013-2015</div>
           <div class="font-semibold text-xl mb-1">Web Design / Content Management</div>
+          <div class="text-gray-500 mb-2">Ecloga Italia - Milan, Italy</div>
         </div>
       </section>
       <!-- 2009-2012 -->
@@ -200,7 +229,7 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+            src="/images/galle.jpg"
             alt="Work Experience Visual"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
             loading="lazy"
@@ -209,6 +238,7 @@ const metadata = {
         <div class="md:w-2/3 p-6 flex flex-col justify-center">
           <div class="text-blue-700 font-bold text-lg mb-2">2009-2012</div>
           <div class="font-semibold text-xl mb-1">Retail Store Operations / E-Commerce Management</div>
+          <div class="text-gray-500 mb-2">Galle´ - Milan, Italy</div>
         </div>
       </section>
     </section>
@@ -220,12 +250,14 @@ const metadata = {
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
-          <div class="text-blue-700 font-bold text-lg mb-2">2025</div>
+          
           <img
-            src="/assets/images/logo-placeholder.svg"
-            alt="Logo placeholder"
-            class="w-16 h-16 mx-auto mb-2 opacity-60"
+            src="/images/mozilla-developer-network.png"
+            alt="Mozilla Developer Network logo"
+            class="w-auto h-16 mx-auto mt-4 mb-4 opacity-90"
+            loading="lazy"
           />
+          <div class="text-blue-700 font-bold text-lg mb-2">2025</div>
           <div class="font-semibold text-xl mb-1">Front-End Web Developer - Fortbildung</div>
           <div class="text-gray-500 mb-2">Mozilla Developer Network - Learning Partner Scrimba</div>
           <div>
@@ -237,7 +269,7 @@ const metadata = {
               onclick="const e2025=document.getElementById('skills-2025'); const btn2025=this; if(e2025.classList.toggle('hidden')){btn2025.setAttribute('aria-expanded','false');btn2025.textContent='More info';}else{btn2025.setAttribute('aria-expanded','true');btn2025.textContent='Less info';}"
               >More info</button
             >
-            <div id="skills-2025" class="hidden text-xs text-gray-400 mt-2">
+            <div id="skills-2025" class="hidden text-s text-gray-400 mt-2">
               HTML5, CSS3, JavaScript (ES6+), DOM Manipulation, Responsive Design, Web Accessibility (a11y), Semantic
               HTML, CSS Flexbox and Grid, Web Forms, Web Standards, Web Performance Optimization, Git, GitHub, Command
               Line (CLI), NPM, Node.js, Module Bundlers (Vite, Webpack), Browser DevTools, Debugging, React.js, Next.js,
@@ -255,12 +287,14 @@ const metadata = {
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
-          <div class="text-blue-700 font-bold text-lg mb-2">2023</div>
+          
           <img
-            src="/assets/images/logo-placeholder.svg"
-            alt="Logo placeholder"
-            class="w-16 h-16 mx-auto mb-2 opacity-60"
+            src="/images/wbs.png"
+            alt="WBS Training logo"
+            class="w-auto h-16 mx-auto mt-4 mb-4 opacity-90"
+            loading="lazy"
           />
+          <div class="text-blue-700 font-bold text-lg mb-2">2023</div>
           <div class="font-semibold text-xl mb-1">E-Commerce Manager & Marketing - Weiterbildung</div>
           <div class="text-gray-500 mb-2">WBS Training - Freiburg im Breisgau, Germany</div>
           <div>
@@ -272,7 +306,7 @@ const metadata = {
               onclick="const e2023=document.getElementById('skills-2023'); const btn2023=this; if(e2023.classList.toggle('hidden')){btn2023.setAttribute('aria-expanded','false');btn2023.textContent='More info';}else{btn2023.setAttribute('aria-expanded','true');btn2023.textContent='Less info';}"
               >More info</button
             >
-            <div id="skills-2023" class="hidden text-xs text-gray-400 mt-2">
+            <div id="skills-2023" class="hidden text-s text-gray-400 mt-2">
               E-Commerce Management, Social Media Management, Content Creation, Web Design, HTML, CSS, Graphic Design,
               Desktop Publishing, In/Out-Bound & Performance Marketing, CMS, CRM, Online Law, Project Management, UX/UI,
               SEM (SEO, SEA), Social Media Marketing, Google Marketing, Web Analytics.
@@ -282,12 +316,14 @@ const metadata = {
         <div
           class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
         >
-          <div class="text-blue-700 font-bold text-lg mb-2">2021</div>
+          
           <img
-            src="/assets/images/logo-placeholder.svg"
-            alt="Logo placeholder"
-            class="w-16 h-16 mx-auto mb-2 opacity-60"
+            src="/images/ihkso.png"
+            alt="IHK Industrie- und Handelskammer Südlicher Oberrhein logo"
+            class="w-auto h-16 mx-auto mt-4 mb-4 opacity-90"
+            loading="lazy"
           />
+          <div class="text-blue-700 font-bold text-lg mb-2">2021</div>
           <div class="font-semibold text-xl mb-1">Kaufmann im Einzelhandel - Ausbildung Anerkennung</div>
           <div class="text-gray-500 mb-2">
             IHK Industrie- und Handelskammer Südlicher Oberrhein - Freiburg im Breisgau, Germany
@@ -301,7 +337,7 @@ const metadata = {
               onclick="const e2021=document.getElementById('skills-2021'); const btn2021=this; if(e2021.classList.toggle('hidden')){btn2021.setAttribute('aria-expanded','false');btn2021.textContent='More info';}else{btn2021.setAttribute('aria-expanded','true');btn2021.textContent='Less info';}"
               >More info</button
             >
-            <div id="skills-2021" class="hidden text-xs text-gray-400 mt-2">
+            <div id="skills-2021" class="hidden text-s text-gray-400 mt-2">
               Beraten und Verkaufen (erfolgsorientiert, anspruchsvollen Situationen), arbeiten in E-Commerce
               Onlinehandel, Offline und Online Marketing, Warenpräsentation, Mitwirken bei Werbung und
               Verkaufsförderung, Kassieren und Kassenabrechnen, Warenannahme, Lagerung, Warenbeständen, Warensortiment,
@@ -316,18 +352,22 @@ const metadata = {
           <div class="font-semibold text-xl mb-1">Abitur</div>
           <div class="text-gray-500 mb-2">Michelangelo High School Gymnasium - Milan, Italy</div>
         </div>
-      </div>
-      <div
-        class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col mt-6 border-2 border-black dark:border-none"
-      >
-        <div class="font-semibold text-xl mb-1">Other Certifications</div>
-        <div class="text-xs text-gray-400 mb-2">
-          Microsoft Office 365, Google Digital Training (Google Analytics, Google Ads, Google Marketing, Google Suite),
-          Windows IT Support, Adobe Photoshop, Adobe Indesign, Adobe Premiere, Figma, Shopify, Webflow, Wordpress,
-          Agile, Scrum, Effective Communication & NLP, HACCP, DSGVO, SEO, E-Commerce SEO, Social Media E-Commerce,
-          Visual Studio Code, Git, GitHub, HTML, CSS, Javascript, React, NextJS, Vue, Astro.
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
+        >
+          <div class="text-blue-700 font-bold text-lg mb-2">2023 - 2025</div>
+          <div class="font-semibold text-xl mb-1">Dev Certifications</div>
+          <div class="text-gray-500 mb-2">Figma, Shopify, Webflow, Wordpress, SEO, E-Commerce SEO, Social Media E-Commerce, UI Design, Command Line, Netlify, Visual Studio Code, Git, GitHub, HTML, CSS, Javascript, React, NextJS, Vue, Astro</div>
+        </div>
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col text-gray-900 dark:text-gray-100 border-2 border-black dark:border-none"
+        >
+          <div class="text-blue-700 font-bold text-lg mb-2">2015 - 2023</div>
+          <div class="font-semibold text-xl mb-1">Other Certifications</div>
+          <div class="text-gray-500 mb-2">Microsoft Office 365, Google Digital Training (Google Analytics, Google Ads, Google Marketing, Google Suite), Windows IT Support, Adobe Photoshop, Adobe Indesign, Adobe Premiere, Agile, Scrum, Effective Communication & NLP, HACCP, DSGVO, Information Security.</div>
         </div>
       </div>
+
     </section>
 
     <!-- Professional Roles Section -->
@@ -341,8 +381,8 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Professional Role Visual"
+            src="/images/retail2.jpg"
+            alt="E-Commerce Specialist"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
             loading="lazy"
           />
@@ -386,8 +426,8 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Professional Role Visual"
+            src="/images/e-commerce.jpg"
+            alt="Retail Store Operations"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
             loading="lazy"
           />
@@ -428,8 +468,8 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Professional Role Visual"
+            src="/images/dev.png"
+            alt="Analytics & SEO & Website Performance"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
             loading="lazy"
           />
@@ -469,8 +509,8 @@ const metadata = {
           class="md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-indigo-900 p-0 relative min-h-[220px] overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
-            alt="Professional Role Visual"
+            src="/images/analytics.jpg"
+            alt="Front-End Web Developer"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
             loading="lazy"
           />
@@ -479,7 +519,7 @@ const metadata = {
           <div class="text-sm text-white mb-1">
             Content analysis, optimization and promotion on the preferred target groups channels
           </div>
-          <div class="text-blue-700 font-bold text-2xl mb-2">Analytics & SEO & Website Performance</div>
+          <div class="text-blue-700 font-bold text-2xl mb-2">Analytics / SEO / Website Performance</div>
           <div class="text-xs text-gray-600 dark:text-gray-400 mb-2">Level: Intermediate · 5+ Years experience</div>
           <div class="font-semibold text-md mb-1 mt-2 flex items-center gap-2">
             <Icon name="tabler:check" class="text-blue-600 w-5 h-5" />Skills
