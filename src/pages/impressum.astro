@@ -1,0 +1,86 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Legal Notice',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+---
+
+<PageLayout metadata={metadata}>
+  <main class="min-h-screen text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
+    <section class="max-w-4xl mx-auto py-12 px-4">
+      <h1 class="text-4xl font-bold mb-6">Legal Notice</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-12">Last updated: November 16, 2025</p>
+
+      <div class="prose dark:prose-invert max-w-none">
+        <h2 class="text-2xl font-bold mb-4 mt-8">Educational and Non-Commercial Purpose</h2>
+        <p class="mb-4">
+          This website is created and maintained <strong
+            >solely for educational, learning, and personal skill development purposes</strong
+          >. It is a non-commercial, personal portfolio project intended to demonstrate web development skills and
+          technical abilities.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3 mt-6">Purpose of This Website:</h3>
+        <ul class="list-disc pl-6 mb-4 space-y-2">
+          <li>
+            <strong>Educational only:</strong> This site serves as a learning exercise in modern web development technologies
+            (Astro, TypeScript, Tailwind CSS, etc.)
+          </li>
+          <li><strong>Portfolio demonstration:</strong> A showcase of technical skills for educational purposes</li>
+          <li>
+            <strong>Non-commercial:</strong> No goods, services, or professional activities are offered through this website
+          </li>
+          <li>
+            <strong>No business activity:</strong> This site is not used for any commercial, professional, or business purposes
+          </li>
+          <li><strong>Private project:</strong> Created as a personal learning project without commercial intent</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-3 mt-8">Exemption from Commercial Legal Requirements:</h3>
+        <p class="mb-4">
+          This website is a <strong>purely personal, non-commercial, and educational project</strong> and is therefore exempt from commercial legal requirements such as business disclosures or Impressum obligations. It:
+        </p>
+        <ul class="list-disc pl-6 mb-4 space-y-2">
+          <li>Does not offer any commercial services or products</li>
+          <li>Does not conduct any business activities</li>
+          <li>Is not used for professional client acquisition</li>
+          <li>Serves exclusively educational and learning purposes</li>
+          <li>Collects no user data (no cookies, no tracking, no analytics)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-3 mt-8">Hosting Information:</h3>
+        <p class="mb-4">
+          This site is hosted globally via <strong>Netlify</strong> (primary servers: United States). Static files may be served from servers worldwide, including outside the EU.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3 mt-8">Content Disclaimer:</h3>
+        <p class="mb-4">
+          All content on this website is provided for educational purposes only. While created with care, no guarantee
+          is made regarding accuracy, completeness, or currentness of information. This is a learning project and should
+          be viewed as such.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3 mt-8">No Data Collection:</h3>
+        <p class="mb-4">This website respects your privacy completely:</p>
+        <ul class="list-disc pl-6 mb-4 space-y-1">
+          <li>No cookies</li>
+          <li>No analytics or tracking</li>
+          <li>No personal data collection</li>
+          <li>No third-party services that collect data</li>
+        </ul>
+
+        <hr class="my-8 border-gray-300 dark:border-gray-700" />
+
+        <p class="text-sm text-gray-600 dark:text-gray-400 italic">
+          This website is a non-commercial educational project. If you believe any content violates your rights, please
+          contact the hosting provider (Netlify) directly.
+        </p>
+      </div>
+    </section>
+  </main>
+</PageLayout>

@@ -1,15 +1,16 @@
 ---
 import { SITE } from 'astrowind:config';
-import { getHomePermalink } from '~/utils/permalinks';
+// import { getHomePermalink } from '~/utils/permalinks';
 ---
 
 <footer class="border-t border-gray-200 dark:border-slate-800 not-prose py-6 text-center text-sm dark:text-slate-400">
-  <a class="font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+  <!-- <a class="font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a> -->
   <div class="mt-2">&copy; {new Date().getFullYear()} {SITE?.name}. All rights reserved.</div>
-  <div class="mt-1 flex flex-wrap justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+  <div class="mt-1 text-xs text-gray-400 dark:text-gray-500">
+    <em>This website is solely a personal educational project, with no commercial purpose.</em>
+  </div>
+  <div class="mt-2 flex flex-wrap justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
     <a href="/privacy" class="underline hover:text-blue-700">Privacy Policy</a>
-    <a href="/cookie-policy" class="underline hover:text-blue-700">Cookie Policy</a>
-    <a href="/terms" class="underline hover:text-blue-700">Terms of Service</a>
-    <a href="/impressum" class="underline hover:text-blue-700">Impressum</a>
+    <a href="/impressum" class="underline hover:text-blue-700">Legal Notice</a>
   </div>
 </footer>
